@@ -1,0 +1,28 @@
+ Crystal Ding
+
+ Tehnical Skills:
+    Backend & IDE: C, C++, Visual Studio 2015/2017
+    Frontend: JavaScript, HTML5, CSS3
+    Database: SQL, DB2
+    OS & Other: Linux/Unix, Windows, Git
+
+ What I want to be: Backend Developer, Full-stack Developer, iOS/Android Developer 
+
+ What I'm doing now: Student at Seneca College, Computer Programming and Analysis 4.0/4.0
+    Completed courses:
+        IPC144-Introduction to Programming Using C
+        ULI101-Introduction to UNIX/Linux and the Internet 
+        DBS201-Introduction to Database Design and SQL
+        DCF255-Data Communications Fundamentals 
+        OOP244-Introduction to Object Oriented Programming 
+        WEB222-Web Programming Principles
+
+ What I have been done in the past: Technical Recruiter for 3+ years 
+    Talent Attraction Specialist - WilsonHCG                     Mar 2017-Present  
+        Project/Account: Evonik, Uber, Atlassian
+    Technical Talent Specialist - iTechtions Inc.                Aug 2016-Present
+    Technical Recruitment Consultant - Adiuvo Group              Nov 2015-Aug 2016
+
+ Certification & Education
+    Bachelor of Business Administration, Human Resources         2010-2014
+    Certified Human Resources Professional Designation (CHRP)    2014    
