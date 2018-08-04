@@ -1,5 +1,3 @@
-# Bea-Project
-
 # Crystal's Personal Project
 
 A text-based role-playing game written in C++. 
