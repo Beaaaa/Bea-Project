@@ -245,13 +245,13 @@ namespace RPG {
 		int flag = 1;
 
 		if (alive() && !isEmpty() && !rhs.isEmpty()) {
-			hp_after_attack(rhs);
-
 			if (type != 'B') {
 				attackMethod(rhs);
+				hp_after_attack(rhs);
 			}
 			else {
-				if (health <= damage(*this)) {
+				hp_after_attack(rhs);
+				if (health <= rhs.damage(*this)) {
 					std::cout << " ------------------------------------------------------------------------------------" << std::endl << std::endl;
 					std::cout << " " << name << ": \"Ouch, stop! stop!! What are you doing here?\"" << std::endl << std::endl;
 					std::cout << "    1. \"To have some fun~\"" << std::endl;
@@ -369,11 +369,11 @@ namespace RPG {
 					std::cout << " Enjoy your time here!" << std::endl;
 					std::cout << std::endl;
 					health = 50;
-					attack += 20;
+					attack += 10;
 					enhanced_atk = attack;
-					defense += 20;
+					defense += 10;
 					enhanced_def = defense;
-					speed += 20;
+					speed += 10;
 					flag = 0;
 					return is;
 				}
