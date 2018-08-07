@@ -1,10 +1,10 @@
- Crystal Ding
+ Crystal Ding (https://www.linkedin.com/in/crystal-ding/)
 
  Tehnical Skills:
-    Backend & IDE: C, C++, Visual Studio 2015/2017
+    Backend: C, C++, Python
     Frontend: JavaScript, HTML5, CSS3
     Database: SQL, DB2
-    OS & Other: Linux/Unix, Windows, Git
+    OS & Other: Linux/Unix, Windows, Visual Studio 2015/2017, Git
 
  What I want to be: Backend Developer, Full-stack Developer, iOS/Android Developer 
 

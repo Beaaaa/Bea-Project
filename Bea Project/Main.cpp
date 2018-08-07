@@ -1,10 +1,23 @@
-﻿#include "Player.h"
+﻿/*
+Crystal Ding
+08/06/2018
+main functions
+*/
+
+#include "Player.h"
+#include "Beamo.h"
+#include "Basus.h"
 
 using namespace std;
 using namespace RPG;
 
 int main(void) {
-	
+	int flag = 1;
+	int option = 0;
+	char* input = nullptr;
+
+	Player boss("Phanos", 50, 12, 8, 5, 'B');
+
 	cout << " Hello, world!" << endl << endl;
 	cout << " 'Bea Project' is a text-based role-playing game. " << endl; 
 	cout << " The purpose of this game is to create a fun way to present my code and resume for the upcoming co-op opportunities." << endl << endl;
@@ -16,41 +29,42 @@ int main(void) {
 	cout << " (I know it sounds familiar. " << char (236) << " War 2 is coming!)";
 	cin.ignore(2000, '\n');
 	cout << endl;
-	cout << " Why don't we start with your name?" << endl;
-	cout << endl;
+	cout << " Why don't we start with your profession?" << endl << endl;
+	cout << "    1. Beamo" << endl;
+	cout << "    2. Basus" << endl;
+	cout << "    3. Ordinary" << endl << endl;
 
-	Player reg_player;
-	cin >> reg_player;
-	cout << reg_player;
+	while (flag == 1) {
+		cout << " Your choice: ";
+		input = new char[max_length + 1];
+		std::cin.getline(input, max_length + 1);
+		std::stringstream is(input);
+		cout << endl;
 
-	Player boss("Phanos", 50, 12, 8, 5, 'B');
-	cout << boss;
-
-	cout << " ----------------------" << endl;
-	cout << "      Game Starts!     " << endl;
-	cout << " ----------------------" << endl;
-
-	reg_player * boss;
-	cout << endl;
-
-	if (!reg_player.alive() && boss.alive()) {
-		if (reg_player.hp() != -99) {
-			cout << " ------------------------" << endl;
-			cout << "    Game Over... (X_X)   " << endl;
-			cout << " ------------------------" << endl;
+		if (is >> option && is >> input) {
+			errorMsg();
 		}
-	}
-	else if (reg_player.alive() && !boss.alive()) {
-		cout << " ------------------------" << endl;
-		cout << "     You win! \\(^_^)/   " << endl;
-		cout << " ------------------------" << endl;
-		cout << endl << endl;
-		reg_player.prize();
-	}
-	else {
-		cout << " ------------------------" << endl;
-		cout << "        Draw (=_=)       " << endl;
-		cout << " ------------------------" << endl;
+		else if (option >= 1 && option <= 3) {
+			if (option == 1) {
+				Beamo user;
+				user.gamePlay(boss);
+				
+			}
+			else if (option == 2) {
+				Basus user;
+				user.gamePlay(boss);
+				
+			}
+			else {
+				Player user;
+				user.copy_name(user.get_name());
+				user.gamePlay(boss);
+			}
+			flag = 0;
+		}
+		else {
+			errorMsg();
+		}
 	}
 
 	cout << endl << " (Press 'Enter' to continue)";
@@ -59,8 +73,10 @@ int main(void) {
 	cout << "    Please take a few minutes to fill out this survey (the link provided below) to help me improve!" << endl << endl;
 	cout << "    https://goo.gl/forms/cPjBMtIpNU3uBIFm2" << endl << endl;
 	cout << "    Bye for now~ o(>_<)o" << endl << endl;
-	cout <<" (Press 'Enter' to exit)";
+
+	cout << " (Press 'Enter' to exit)";
 	cin.ignore(2000, '\n');
-	
+
+	delete[] input;
 	return 0;
 }
