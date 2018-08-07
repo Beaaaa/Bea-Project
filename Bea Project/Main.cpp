@@ -48,12 +48,10 @@ int main(void) {
 			if (option == 1) {
 				Beamo user;
 				user.gamePlay(boss);
-				
 			}
 			else if (option == 2) {
 				Basus user;
 				user.gamePlay(boss);
-				
 			}
 			else {
 				Player user;
